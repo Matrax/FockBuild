@@ -1,0 +1,62 @@
+{
+  "fock-project": 
+  {
+      "name": "fockbuild",
+      "description": "Description",
+      "version": [1, 0, 0],
+      "authors": ["Matrax"],
+      "build-directory": "build"
+  },
+
+  "cpp" : 
+  {
+      "sources": 
+      [
+          "sources/main.cpp",
+          "sources/commands/command.cpp",
+          "sources/commands/info_command.cpp",
+          "sources/commands/build_command.cpp",
+          "sources/commands/print_cmd_command.cpp",
+          "sources/builders/msvc_builder.cpp",
+          "sources/projects/project.cpp",
+          "sources/projects/cpp_project.cpp",
+          "sources/utils/system_utils.cpp"
+      ],
+      "modules": [],
+      "libraries": [],
+      "library-directories": [],
+      "include-directories": 
+      [
+          "includes", 
+          "libraries/json/include"
+      ],
+      "build-type": "EXECUTABLE"
+  },
+
+  "msvc":
+  {
+      "compiler-parameters": 
+      [
+          "/EHsc", 
+          "/std:c++latest", 
+          "/O2", 
+          "/nologo", 
+          "/MP"
+      ],
+      "linker-parameters": ["/nologo"],
+      "lib-parameters": ["/nologo"]
+  },
+
+  "events": {
+    "before-build": [],
+    "after-build": [],
+    "before-install": [],
+    "after-install": [],
+    "before-msvc-compile": [],
+    "after-msvc-compile": [],
+    "before-msvc-link": [],
+    "after-msvc-link": []
+  },
+
+  "fock-version": [1, 0, 0]
+}

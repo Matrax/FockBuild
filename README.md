@@ -1,1 +1,1 @@
-# FockBuild
+My own C++ build system (WIP)
